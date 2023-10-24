@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <div class="homepage">
+         <div class="logo">
+                <img src="URSHA_LOGO-removebg-preview.png" alt="">
+                <p>Gursha digitals</p>
+            </div>
+        <nav class="navbar">
+          
+            <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+            <label for="navbar-toggle" class="navbar-toggle-label">
+                <span class="navbar-toggle-icon">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </span>
+            </label>
+            <ul class="navbar-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="introduction">
+            <div class="col1">
+                <div class="logo2">
+                    <img src="URSHA_LOGO-removebg-preview.png" alt="">
+                    <p>Gursha digitals</p>
+               
+            
+                    
+                
+
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const navbarToggleLabel = document.querySelector('.navbar-toggle-label');
+
+    navbarToggle.addEventListener('change', function () {
+        if (this.checked) {
+            navbarToggleLabel.classList.add('active');
+        } else {
+            navbarToggleLabel.classList.remove('active');
+        }
+    });
+</script>
+
+</html>
