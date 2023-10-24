@@ -1,11 +1,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-}
-
-.homepage {
     background-color: #2A6482;
-    width: 100%;
 }
 
 .navbar {
@@ -104,6 +100,7 @@ body {
     width: 75%;
     margin: 0 auto;
     margin-top: 150px;
+    padding-bottom: 130px;
 
 
 }
@@ -126,7 +123,27 @@ body {
     font-weight: 400;
     text-transform: capitalize;
 }
-
+.col1 .buttons{
+    display: flex;
+}
+.col1 .buttons .service_btn,.request_btn{
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color:#F9991D;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 16px;
+    padding: 15px 30px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.col1 .buttons .request_btn{
+    margin-left: 20px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+.col1 .buttons .request_btn:hover{
+    background-color:#F9991D;
+}
 .col2 {
     width: 40%;
     /* background-color: #98B3BB; */
@@ -142,6 +159,73 @@ body {
 .col2 .image img {
     width: 70%;
 }
+.servicepage{
+}
+.title{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+.title h1 span{
+    color: white;
+}
+.service_collection{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 25px;
+}
+.services {
+    position: relative;
+    display: flex;
+    width: 250px;
+    color: #909090;
+    flex-direction: column;
+    background-color: #222222;
+    transition: background-color 0.8s ease;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .services .content{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .services .content h5{
+    margin: 0;
+    color: white;
+  }
+  .service_image {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+  }
+
+  .service_image.white {
+    opacity: 0;
+  }
+
+  .services:hover {
+    background-color: #212C4F;
+  }
+
+  .services:hover .service_image.blue {
+    opacity: 0;
+  }
+
+  .services:hover .service_image.white {
+    opacity: 1;
+  }
 
 
 @media (max-width:1110px) {
@@ -171,7 +255,7 @@ body {
 
     .col1 h5 {
         margin-top: 5px;
-        font-size: 12px;
+        font-size: 19px;
         font-weight: 400;
         text-transform: capitalize;
     }
@@ -318,5 +402,9 @@ body {
 
     .col2 .image img {
         width: 70%;
+    }
+    .col1 .buttons .service_btn,.request_btn{
+        font-size: 12px;
+        padding: 10px 25px;
     }
 }
