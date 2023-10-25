@@ -174,14 +174,14 @@ body {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 30px;
     justify-content: center;
     margin-top: 25px;
 }
 .services {
     position: relative;
     display: flex;
-    width: 250px;
+    width: 280px;
     color: #909090;
     flex-direction: column;
     background-color: #222222;
