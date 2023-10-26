@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #F9991D;
+    /* background-color: #F9991D; */
 }
 .homepage {
     background-color: #2A6482;
@@ -257,6 +257,8 @@ strong {
     padding: 50px;
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 7%;
 }
 
 .header {
