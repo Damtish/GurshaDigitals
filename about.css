@@ -285,7 +285,9 @@ body {
     .navbar-menu li {
         margin: 30px 0;
     }
-
+    .navbar-menu li a {
+        color: white;
+    }
     .navbar-toggle:checked~.navbar-menu {
         opacity: 1;
         visibility: visible;

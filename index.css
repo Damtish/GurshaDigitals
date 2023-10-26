@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #2A6482;
+  
 }
 
 .navbar {
@@ -142,7 +143,8 @@ body {
     transition: all 0.3s ease;
 }
 .col1 .buttons .request_btn:hover{
-    background-color:#F9991D;
+    background-color:white;
+    color: black;
 }
 .col2 {
     width: 40%;
@@ -227,7 +229,182 @@ body {
     opacity: 1;
   }
 
+  .whoarewe{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background-color: #222222;
+    margin-top: 150px;
+    border-radius: 50px;
+    opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+ 
+  }
 
+  .whoarewe.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .whoarewe .content{
+    width: 50%;
+    text-align:justify;
+    color: rgb(150, 150, 150);
+    line-height: 2em;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  .whoarewe .content h1{
+    text-align: right;
+    color: white;
+  }
+  .whoarewe .image{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .testimonials{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+   
+  }
+  .testimonials .title{
+    display: block;
+    text-align: center;
+   
+  }
+ 
+  .testimonials .people{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .testimonials .people .person{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 350px;
+    padding: 20px 0px; 
+    text-align: center;
+
+  }
+  .testimonials .people .person .image{
+    display: flex;
+    justify-content: center;
+  }
+  .testimonials .people .person .image img{
+    width: 80px;
+    border-radius: 50%;
+    align-self: center;
+    background-color: #376982;
+  }
+  .contactus{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+    color: white;
+    margin-top: 200px;
+    gap: 20px;
+  }
+  .contactus .image{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  .contactus .image img{
+    width: 65%;
+  }
+  .contactus .text{
+    width: 40%;  
+  }
+  .contactus .contact_button{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
+  .contactus .contact_button button{
+    width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #E3B27D;
+  border: 0px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  .contactus .contact_button button:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .black-footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 50px;
+    margin-top: 200px;
+  }
+  
+  .footer-left {
+    float: left;
+    width: 50%;
+
+  }
+  
+  .company-quote {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .phone-number {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  .footer-right {
+    float: right;
+    width: 50%;
+    text-align: right;
+  }
+  
+  .quick-links-title {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .quick-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .quick-links li {
+    margin-bottom: 5px;
+  }
+  
+  .quick-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-bottom {
+    clear: both;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .company-name {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+ 
 @media (max-width:1110px) {
 
     .col1 h1 {
@@ -263,6 +440,41 @@ body {
     .col2 .image img {
         width: 100%;
     }
+    .contactus{
+        width: 95%;
+        padding-right: 10px;
+    }
+}
+@media (max-width:850px) {
+    .whoarewe .content{
+        width: 50%;
+        text-align:start;
+        color: #909090;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+        margin-left: 50px;
+        margin-top: 50px;
+        word-spacing:1px;
+      }
+      .whoarewe .content h1{
+        text-align: right;
+        color: white;
+      }
+      .whoarewe .image{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .contactus .contact_button button{
+        width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #E3B27D;
+      border: 0px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      
 }
 @media (max-width: 768px) {
     .logo {
@@ -309,11 +521,17 @@ body {
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
+        
 
     }
 
     .navbar-menu li {
         margin: 30px 0;
+        
+    }
+    .navbar-menu li a {
+        color: white;
+        
     }
 
     .navbar-toggle:checked~.navbar-menu {
@@ -347,6 +565,39 @@ body {
     .col1 h5 {
         font-size: 17px;
     }
+    .whoarewe{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .whoarewe .content{
+        width:90%;
+        word-wrap:break-word;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .whoarewe .content h1{
+       text-align: center;
+    }
+    .whoarewe .image{
+        order: -1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .testimonials{
+        width: 90%;
+       
+      }
+
+      .testimonials .people{
+        flex-direction: column;  
+        justify-content: center;  
+        align-items: center;
+      }
+     
 }
 
 @media (max-width:680px) {
@@ -381,6 +632,55 @@ body {
     .col2 .image img {
         width: 50%;
     }
+    .contactus .image{
+        width: 0%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .contactus .text{
+        width: 70%;  
+      }
+      .contactus .contact_button{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+      }
+      .contactus .contact_button button{
+        width: 150px;
+      height: 150px;
+     
+      }
+      .black-footer {
+        padding: 10px;
+      }
+    
+      .footer-left,
+      .footer-right {
+        float: none;
+        width: 100%;
+        text-align: center;
+      }
+    
+      .company-quote {
+        font-size: 16px;
+      }
+    
+      .phone-number {
+        font-size: 12px;
+      }
+    
+      .quick-links-title {
+        font-size: 14px;
+      }
+    
+      .quick-links li a {
+        font-size: 12px;
+      }
+    
+      .company-name {
+        font-size: 12px;
+      }
 }
 @media (max-width:490px) {
     .introduction{
@@ -407,4 +707,46 @@ body {
         font-size: 12px;
         padding: 10px 25px;
     }
+    .whoarewe{
+        width: 90%;
+    }
+    .whoarewe .content{
+        width:90%;
+        word-wrap:break-word;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .whoarewe .content h1{
+       font-size: 20px;
+    }
+    .whoarewe .content p{
+        font-size: 12px;
+     }
+    .whoarewe .image{
+        order: -1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .whoarewe .image img{
+        width: 80px;
+    
+    }
+    .testimonials .people .person{
+        width: 100%;    
+      }
+      .contactus .text h1{
+        font-size: large;
+      }
+      .contactus .text p{
+        font-size: medium;
+      }
+      .contactus .contact_button button{
+        width: 100px;
+      height: 100px;
+     
+      }
+   
 }
