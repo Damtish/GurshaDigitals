@@ -1,11 +1,9 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-}
-
-.homepage {
     background-color: #2A6482;
-    width: 100%;
+    overflow-x: hidden;
+
 }
 
 .navbar {
@@ -20,6 +18,7 @@ body {
     /* Adjust the blur value as desired */
     z-index: 9999;
     /* Adjust the z-index as needed */
+
 }
 
 .logo {
@@ -29,10 +28,9 @@ body {
     padding-top: 0px;
     display: flex;
     z-index: 9999;
+    /* Adjust the z-index as needed */
     align-items: center;
     padding-top: 10px;
-
-
 }
 
 .logo img {
@@ -89,7 +87,6 @@ body {
     margin-left: 10px;
 }
 
-
 .navbar-menu li a {
     text-decoration: none;
     color: black;
@@ -100,171 +97,170 @@ body {
     color: #FFB15D;
 }
 
+.homepage {
+    background-image: image-set('background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 100px;
+}
 
 .introduction {
-    height: 50vh;
     display: flex;
-    flex-direction: row;
-
+    width: 75%;
     margin: 0 auto;
-    margin-top: 120px;
-    padding-bottom: 100px;
-    font-family: 'Arial', sans-serif;
+    margin-top: 150px;
+    padding-bottom: 130px;
 
-    color: #ffffff;
-
-    justify-content: center;
-    align-items: center;
 
 }
 
-.quote-section {
-    text-align: center;
-    margin: 0 auto;
+.col1 {
+    width: 60%;
+    word-wrap: break-word;
 }
 
-.quote-section h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+.col1 h1 {
+    margin-bottom: 0;
+    font-size: 50px;
+    text-transform: uppercase;
+    line-height: 1.3em;
 }
 
-.quote-section p {
-    font-size: 24px;
-    margin-bottom: 30px;
+.col1 h5 {
+    margin-top: 5px;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: capitalize;
 }
 
-.quote-section button {
-    padding: 10px 25px;
-    font-size: 20px;
+.col1 .buttons {
+    display: flex;
+}
+
+.col1 .buttons .request_btn {
+    font-weight: 500;
+    color: #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 16px;
+    padding: 15px 30px;
+    border: 1px solid white;
+    cursor: pointer;
     background-color: transparent;
-    border: 2px solid #ffffff;
-    border-radius: 50px;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.quote-section button:hover {
-    border: 0;
-    background-color: orange;
-    color: #2A6482;
-}
 
-.servicepage {
-    position: relative;
-    top: -70px;
-    /* background-color: orange; */
-}
-
-.service_collection {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    margin-top: 25px;
-}
-
-.services {
-    position: relative;
-    display: flex;
-    width: 280px;
-    color: #909090;
-    flex-direction: column;
-    background-color: #ffffff;
-    transition: background-color 0.8s ease;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05), 0 1.5rem 2.2rem rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.3s ease-in;
-}
-
-.services .content {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-.services .content h5 {
-    margin: 0;
+.col1 .buttons .request_btn:hover {
+    background-color: white;
     color: black;
 }
 
-.services .image-container {
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    opacity: 1;
-    transition: opacity 0.8s ease;
-}
-.services .image-container img{
-    width: 50px;
-    height: 50px;
+.col2 {
+    width: 40%;
+    /* background-color: #98B3BB; */
 }
 
-.services:hover {
-    transform:translateY(-10px);
-}
-
-.contactform{
+.col2 .image {
+    width: 100%;
     display: flex;
-    width: 65%;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.col2 .image img {
+    width: 70%;
+}
+.total-information{
+    width: 75%;
     margin: 0 auto;
-    gap: 30px;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05), 0 1.5rem 2.2rem rgba(0, 0, 0, 0.1);
-    padding: 50px;
-    background-color: #222222;
-    border-radius: 20px;
-    color: white;
 }
-form{
+.total-information .info{
+    text-align: center;
+    margin-bottom: 150px;
+    transition: opacity 0.5s ease-in-out;
+}
+.total-information .info h1{
+    color: #FFFFFF;
+}
+.total-information .info .notes{
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 55%;
+    gap: 20px;
+    flex-wrap: wrap;
     justify-content: center;
 }
-form div{
-    display: flex;
-    gap: 10px;
-}
-form div label{
-    width: 20%;
-}
-form div input{
-    width: 70%;
-    height: 30px;
-    border-radius: 5px;
-}
-form div textarea{
-    width: 70%;
-    resize: none;
-    border-radius: 5px;
-}
-iframe{
-    width: 45%;
-}
-
-
-button {
-    background-color: orange;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.total-information .info .notes .note{
     border-radius: 10px;
-    width: 250px;
-    align-self: center;
+    padding: 20px 10px;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05), 0 1.5rem 2.2rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    background-color: #FFFFFF;
+    width: 350px;
+    height: auto;
+    margin-top: 50px;
+    opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.5s, transform 0.5s;
+    
+}
+.total-information .info .notes .note.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+/* .info {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-button:hover {
-    background-color: #2A6482;
+.show {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+.total-information .info .notes .note p{
+    color: gray;
 }
+.total-information .info .notes .note:hover{
+    transform: translateY(-10px);
+}
+.conclusion {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.conclusion h4 {
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.conclusion p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 15px;
+    background-color: #ffa13d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #ff921e;
+}
+
+
 .black-footer {
     background-color: #111111;
     color: #ffffff;
@@ -338,35 +334,36 @@ button:hover {
   
 
 
-@media (max-width:1110px) {
-.contactform{
-    width: 75%;
-    padding: 40px;
-}
-}
 
 @media (max-width:1000px) {
-    .quote-section h1 {
+
+    .col1 {
+        width: 60%;
+        word-wrap: break-word;
+    }
+
+    .col1 h1 {
+        margin-bottom: 0;
         font-size: 40px;
-        margin-bottom: 20px;
+        text-transform: uppercase;
+        line-height: 1.3em;
     }
-    
-    .quote-section p {
-        font-size: 20px;
-        margin-bottom: 30px;
+
+    .col1 h5 {
+        margin-top: 5px;
+        font-size: 19px;
+        font-weight: 400;
+        text-transform: capitalize;
     }
-    
-    .quote-section button {
-        padding: 10px 25px;
-        font-size: 20px;
-        background-color: transparent;
-        border: 2px solid #ffffff;
-        border-radius: 50px;
-        color: #ffffff;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+
+    .col2 .image img {
+        width: 100%;
     }
-   }
+
+
+}
+
+@media (max-width:850px) {}
 
 @media (max-width: 768px) {
     .logo {
@@ -407,7 +404,7 @@ button:hover {
         /* Adjust the blur value as desired */
         z-index: 9999;
         /* Adjust the z-index as needed */
-        height: auto;
+        height: 70vh;
         font-size: 20px;
         margin-right: 0%;
         gap: 0px;
@@ -415,14 +412,17 @@ button:hover {
         visibility: hidden;
         transition: all 0.3s ease;
 
+
     }
 
     .navbar-menu li {
         margin: 30px 0;
+
     }
 
     .navbar-menu li a {
         color: white;
+
     }
 
     .navbar-toggle:checked~.navbar-menu {
@@ -442,119 +442,158 @@ button:hover {
         transform: rotate(-45deg) translate(4px, -3px);
     }
 
+    .homepage {
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: unset;
+        margin-bottom: 100px;
+    }
+
     .introduction {
         display: flex;
         width: 85%;
         margin: 0 auto;
         margin-top: 100px;
-        justify-content: center;
+
     }
-    .quote-section h1 {
+
+    .col1 h1 {
         font-size: 35px;
-        margin-bottom: 20px;
     }
-    
-    .quote-section p {
-        font-size: 16px;
-        margin-bottom: 30px;
+
+    .col1 h5 {
+        font-size: 17px;
     }
-    
-    .quote-section button {
-        padding: 7px 22px;
-        font-size: 16px;
-        background-color: transparent;
-        border: 2px solid #ffffff;
-        border-radius: 50px;
-        color: #ffffff;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-    .contactform{
-        width: 80%;
-        padding: 25px;
-    }
+
 }
 
 @media (max-width:680px) {
-    .contactform{
-        width: 85%;
-        flex-direction: column;
-        padding: 50px 10px;
-    }
-    form{
-        width: 100%;
-    }
-    iframe{
-        width: 100%;
-        height: 400px;
-    }
-    .black-footer {
-      padding: 10px;
-    }
-  
-    .footer-left,
-    .footer-right {
-      float: none;
-      width: 100%;
-      text-align: center;
-    }
-    .footer-left .social-icons{
-      justify-content: center;
-    }
-    .footer-left .social-icons a img{
-      width:20px ;
-    }
-  
-    .company-quote {
-      font-size: 16px;
-    }
-  
-    .phone-number {
-      font-size: 12px;
-    }
-  
-    .quick-links-title {
-      font-size: 14px;
-    }
-  
-    .quick-links li a {
-      font-size: 12px;
-    }
-  
-    .company-name {
-      font-size: 12px;
-    }
-
-  }
-
-@media (max-width: 460px) {
     .introduction {
-        display: flex;
+        flex-direction: column;
+    }
+
+    .col1 {
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+    .col1 h1 {
+        margin-bottom: 0;
+        font-size: 40px;
+        text-transform: uppercase;
+        line-height: 1.3em;
+    }
+
+    .col1 h5 {
+        margin-top: 5px;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+
+    .col2 {
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    .col2 .image {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .col2 .image img {
+        width: 50%;
+    }
+    .total-information{
         width: 90%;
         margin: 0 auto;
-        margin-top: 100px;
-        justify-content: center;
-
     }
-    .quote-section h1 {
+
+
+    .black-footer {
+        padding: 10px;
+    }
+
+    .footer-left,
+    .footer-right {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-left .social-icons {
+        justify-content: center;
+    }
+
+    .footer-left .social-icons a img {
+        width: 20px;
+    }
+
+    .company-quote {
+        font-size: 16px;
+    }
+
+    .phone-number {
+        font-size: 12px;
+    }
+
+    .quick-links-title {
+        font-size: 14px;
+    }
+
+    .quick-links li a {
+        font-size: 12px;
+    }
+
+    .company-name {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:490px) {
+    .introduction {
+        margin-top: 50px;
+    }
+
+    .col1 h1 {
+        margin-bottom: 0;
         font-size: 30px;
+        text-transform: uppercase;
+        line-height: 1.1em;
+    }
+
+    .col1 h5 {
+        margin-top: 5px;
+        font-size: 10px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+
+    .col2 .image img {
+        width: 70%;
+    }
+
+    .col1 .buttons .service_btn,
+    .request_btn {
+        font-size: 12px;
+        padding: 10px 25px;
+    }
+    .total-information .info h1{
+        font-size: 22px;
+    }
+    .total-information .info p{
+        font-size: 14px;
+    }
+    .conclusion h4 {
+        font-size: 22px;
+        color: #FFFFFF;
         margin-bottom: 20px;
     }
     
-    .quote-section p {
-        font-size: 15px;
-        margin-bottom: 30px;
-    }
-    
-    .quote-section button {
-        padding: 7px 22px;
-        font-size: 15px;
-        background-color: transparent;
-        border: 2px solid #ffffff;
-        border-radius: 50px;
-        color: #ffffff;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+    .conclusion p {
+        font-size: 14px;
+        margin-bottom: 15px;
     }
 
 }
