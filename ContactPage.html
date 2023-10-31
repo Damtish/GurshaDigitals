@@ -30,14 +30,14 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="service.html">Services</a></li>
-                <li><a href="ContactPage.html">Contact</a></li>
+                <li><a id="contact" href="ContactPage.html">Contact</a></li>
             </ul>
         </nav>
         <div class="introduction">
             <div class="quote-section">
                 <h1>NEED SOMETHING?</h1>
                 <p>We Are Always Here To Help You Grow Your Business!</p>
-                <button>REQUEST A QUOTE</button>
+                <button onclick="window.location.href = '#contactForm';" >REQUEST A QUOTE</button>
             </div>
         </div>
     </div>
@@ -92,11 +92,11 @@
             </div>
             <div class="email">
                 <label for="email">Email *</label>
-            <input type="email" id="email" required>
+                <input type="email" id="email" required>
             </div>
             <div class="phone">
                 <label for="phone">Phone *</label>
-            <input type="tel" id="phone" required>
+                <input type="tel" id="phone" required>
             </div>
             <div class="subject">
                 <label for="subject">Subject</label>
@@ -104,7 +104,7 @@
             </div>
             <div class="message">
                 <label for="message">Message *</label>
-            <textarea id="message" required></textarea>
+                <textarea id="message" required></textarea>
             </div>
             <button type="submit">SEND MESSAGE</button>
         </form>
