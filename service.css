@@ -91,10 +91,13 @@ body {
     text-decoration: none;
     color: black;
     transition: 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.navbar-menu li a:hover {
-    color: #FFB15D;
+.navbar-menu li a:hover,#service {
+    background-color: #F9991D;
+    color: white;
 }
 
 .homepage {
@@ -195,8 +198,13 @@ body {
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05), 0 1.5rem 2.2rem rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s ease-in;
+<<<<<<< HEAD
     background-color: #000000;
     width: 350px;
+=======
+    background-color: #FFFFFF;
+    width: 340px;
+>>>>>>> 57665834aaa906700756c8361053acc81c3d68c4
     height: auto;
     margin-top: 50px;
     opacity: 0;
@@ -255,12 +263,14 @@ body {
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
+    border: 0px;
 }
 
 .contact-button:hover {
     background-color: #ff921e;
+    transform: scale(1.05);
 }
 
 
@@ -339,7 +349,12 @@ body {
 
 
 @media (max-width:1000px) {
-
+    .logo{
+        margin-left: 4%;
+      }
+      .navbar-menu{
+        margin-right: 10%;
+      }
     .col1 {
         width: 60%;
         word-wrap: break-word;
@@ -366,7 +381,14 @@ body {
 
 }
 
-@media (max-width:850px) {}
+@media (max-width:860px) {
+    .logo{
+        margin-left: 2%;
+      }
+      .navbar-menu{
+        margin-right: 8%;
+      }
+}
 
 @media (max-width: 768px) {
     .logo {
@@ -463,6 +485,10 @@ body {
 
     .col1 h1 {
         font-size: 35px;
+    }
+    .col1 .buttons .request_btn {
+        font-size: 14px;
+        padding: 10px 20px;
     }
 
     .col1 h5 {
@@ -571,6 +597,10 @@ body {
         font-size: 10px;
         font-weight: 400;
         text-transform: capitalize;
+    }
+    .col1 .buttons .request_btn {
+        font-size: 12px;
+        padding: 10px 20px;
     }
 
     .col2 .image img {

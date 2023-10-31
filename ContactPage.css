@@ -1,11 +1,19 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+<<<<<<< HEAD
     background-color: #F9991D;
+=======
+    scroll-behavior: smooth;
+>>>>>>> 57665834aaa906700756c8361053acc81c3d68c4
 }
 
 .homepage {
-    background-color: #2A6482;
+    background-image: image-set('background.svg');
     width: 100%;
 }
 
@@ -95,10 +103,15 @@ body {
     text-decoration: none;
     color: black;
     transition: 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.navbar-menu li a:hover {
-    color: #FFB15D;
+.navbar-menu li a:hover,
+#contact {
+    background-color: #F9991D;
+    color: white;
+
 }
 
 
@@ -123,10 +136,21 @@ body {
     text-align: center;
     margin: 0 auto;
 }
-
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
 .quote-section h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    overflow: hidden;
+    /* Hide the overflowing text */
+    animation: typing 3s steps(20);
+    white-space: nowrap;
+    /* Prevent line breaks */
+    border-right: 2px solid #000;
+    /* Add a blinking cursor effect */
+
 }
 
 .quote-section p {
@@ -202,16 +226,17 @@ body {
     opacity: 1;
     transition: opacity 0.8s ease;
 }
-.services .image-container img{
+
+.services .image-container img {
     width: 50px;
     height: 50px;
 }
 
 .services:hover {
-    transform:translateY(-10px);
+    transform: translateY(-10px);
 }
 
-.contactform{
+.contactform {
     display: flex;
     width: 65%;
     margin: 0 auto;
@@ -222,31 +247,37 @@ body {
     border-radius: 20px;
     color: white;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 55%;
     justify-content: center;
 }
-form div{
+
+form div {
     display: flex;
     gap: 10px;
 }
-form div label{
+
+form div label {
     width: 20%;
 }
-form div input{
+
+form div input {
     width: 70%;
     height: 30px;
     border-radius: 5px;
 }
-form div textarea{
+
+form div textarea {
     width: 70%;
     resize: none;
     border-radius: 5px;
 }
-iframe{
+
+iframe {
     width: 45%;
 }
 
@@ -266,97 +297,109 @@ button {
 button:hover {
     background-color: #2A6482;
 }
+
 .black-footer {
     background-color: #111111;
     color: #ffffff;
     padding: 50px;
     margin-top: 200px;
-  }
-  
-  .footer-left {
+}
+
+.footer-left {
     float: left;
     width: 50%;
-  
-  }
-  .footer-left img{
+
+}
+
+.footer-left img {
     width: 10%;
-  }
-  .footer-left .social-icons{
+}
+
+.footer-left .social-icons {
     display: flex;
     gap: 10px;
-  }
-  .footer-left .social-icons a img{
+}
+
+.footer-left .social-icons a img {
     width: 25px;
-  }
-  
-  .company-quote {
+}
+
+.company-quote {
     margin: 0;
     font-size: 18px;
-  }
-  
-  .phone-number {
+}
+
+.phone-number {
     margin-top: 5px;
     font-size: 14px;
-  }
-  
-  .footer-right {
+}
+
+.footer-right {
     float: right;
     width: 50%;
     text-align: right;
-  }
-  
-  .quick-links-title {
+}
+
+.quick-links-title {
     margin: 0;
     font-size: 16px;
-  }
-  
-  .quick-links {
+}
+
+.quick-links {
     list-style: none;
     padding: 0;
     margin-top: 10px;
-  }
-  
-  .quick-links li {
+}
+
+.quick-links li {
     margin-bottom: 5px;
-  }
-  
-  .quick-links li a {
+}
+
+.quick-links li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
-  }
-  
-  .footer-bottom {
+}
+
+.footer-bottom {
     clear: both;
     text-align: center;
     margin-top: 20px;
-  }
-  
-  .company-name {
+}
+
+.company-name {
     margin: 0;
     font-size: 14px;
-  }
-  
+}
+
 
 
 @media (max-width:1110px) {
-.contactform{
-    width: 75%;
-    padding: 40px;
-}
+    .contactform {
+        width: 75%;
+        padding: 40px;
+    }
 }
 
 @media (max-width:1000px) {
+    .logo {
+        margin-left: 4%;
+    }
+
+    .navbar-menu {
+        margin-right: 10%;
+    }
+
     .quote-section h1 {
         font-size: 40px;
         margin-bottom: 20px;
     }
-    
+
     .quote-section p {
         font-size: 20px;
         margin-bottom: 30px;
     }
-    
+
     .quote-section button {
         padding: 10px 25px;
         font-size: 20px;
@@ -367,7 +410,17 @@ button:hover {
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
-   }
+}
+
+@media (max-width: 860px) {
+    .logo {
+        margin-left: 2%;
+    }
+
+    .navbar-menu {
+        margin-right: 8%;
+    }
+}
 
 @media (max-width: 768px) {
     .logo {
@@ -408,7 +461,7 @@ button:hover {
         /* Adjust the blur value as desired */
         z-index: 9999;
         /* Adjust the z-index as needed */
-        height: auto;
+        height: 70vh;
         font-size: 20px;
         margin-right: 0%;
         gap: 0px;
@@ -450,16 +503,17 @@ button:hover {
         margin-top: 100px;
         justify-content: center;
     }
+
     .quote-section h1 {
         font-size: 35px;
         margin-bottom: 20px;
     }
-    
+
     .quote-section p {
         font-size: 16px;
         margin-bottom: 30px;
     }
-    
+
     .quote-section button {
         padding: 7px 22px;
         font-size: 16px;
@@ -470,63 +524,69 @@ button:hover {
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
-    .contactform{
+
+    .contactform {
         width: 80%;
         padding: 25px;
     }
 }
 
 @media (max-width:680px) {
-    .contactform{
+    .contactform {
         width: 85%;
         flex-direction: column;
         padding: 50px 10px;
     }
-    form{
+
+    form {
         width: 100%;
     }
-    iframe{
+
+    iframe {
         width: 100%;
         height: 400px;
     }
+
     .black-footer {
-      padding: 10px;
-    }
-  
-    .footer-left,
-    .footer-right {
-      float: none;
-      width: 100%;
-      text-align: center;
-    }
-    .footer-left .social-icons{
-      justify-content: center;
-    }
-    .footer-left .social-icons a img{
-      width:20px ;
-    }
-  
-    .company-quote {
-      font-size: 16px;
-    }
-  
-    .phone-number {
-      font-size: 12px;
-    }
-  
-    .quick-links-title {
-      font-size: 14px;
-    }
-  
-    .quick-links li a {
-      font-size: 12px;
-    }
-  
-    .company-name {
-      font-size: 12px;
+        padding: 10px;
     }
 
-  }
+    .footer-left,
+    .footer-right {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-left .social-icons {
+        justify-content: center;
+    }
+
+    .footer-left .social-icons a img {
+        width: 20px;
+    }
+
+    .company-quote {
+        font-size: 16px;
+    }
+
+    .phone-number {
+        font-size: 12px;
+    }
+
+    .quick-links-title {
+        font-size: 14px;
+    }
+
+    .quick-links li a {
+        font-size: 12px;
+    }
+
+    .company-name {
+        font-size: 12px;
+    }
+
+}
 
 @media (max-width: 460px) {
     .introduction {
@@ -537,16 +597,21 @@ button:hover {
         justify-content: center;
 
     }
+
+    iframe {
+        height: 300px;
+    }
+
     .quote-section h1 {
         font-size: 30px;
         margin-bottom: 20px;
     }
-    
+
     .quote-section p {
         font-size: 15px;
         margin-bottom: 30px;
     }
-    
+
     .quote-section button {
         padding: 7px 22px;
         font-size: 15px;

@@ -101,10 +101,13 @@ body {
     text-decoration: none;
     color: black;
     transition: 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.navbar-menu li a:hover {
-    color: #FFB15D;
+.navbar-menu li a:hover,#about {
+    background-color: #F9991D;
+    color: white;
 }
 
 
@@ -496,7 +499,12 @@ footer .company-name {
 }
 
 @media (max-width:1000px) {
-
+    .logo{
+        margin-left: 4%;
+      }
+      .navbar-menu{
+        margin-right: 10%;
+      }
     .logo2 img {
         width: 20%;
         word-wrap: break-word;
@@ -527,6 +535,14 @@ footer .company-name {
         width: 60%;
         gap: 10px;
     }
+}
+@media (max-width: 860px) {
+    .logo{
+        margin-left: 2%;
+      }
+      .navbar-menu{
+        margin-right: 8%;
+      }
 }
 
 @media (max-width: 768px) {
