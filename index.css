@@ -12,12 +12,15 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 30px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 244, 244, 0.479);
   /* Adjust the last value (0.5) for transparency */
   backdrop-filter: blur(10px);
   /* Adjust the blur value as desired */
   z-index: 9999;
   /* Adjust the z-index as needed */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
 }
 
@@ -98,7 +101,7 @@ body {
 }
 
 .homepage {
-  background-image: image-set('background.svg');
+  background-image: image-set('marketing-branding-planning-vision-goals-concept.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

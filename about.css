@@ -2,12 +2,13 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     /* background-color: #F9991D; */
+    background-color: #2A6482;
 }
 
 .homepage {
     background-color: #2A6482;
     width: 100%;
-    background-image: image-set('background.svg');
+    background-image: image-set('two-young-adults-sitting-indoors-holding-smart-phones-surfing-net-generated-by-ai.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -253,12 +254,22 @@ background-color: #21758F;
     display: flex;
     gap: 50px;
     margin-top: 100px;
+    
 }
 
 .container2 .text {
     display: grid;
     grid-template-columns: 1fr;
     width: 60%;
+
+}
+.container2 .text h1{
+    color: #F9991D;
+}
+
+.container2 .text p strong{
+    color: white;
+    left: 50%;
 }
 
 .container2 .image {
@@ -267,7 +278,7 @@ background-color: #21758F;
 }
 
 .container2 .image img {
-    width: 100%;
+    width: 50%;
 }
 
 .container2 h1 {
@@ -288,7 +299,7 @@ strong {
 
 .company-name {
     font-weight: bold;
-    color: #2A6482;
+    color: white;
 }
 
 .container {
@@ -309,27 +320,31 @@ strong {
     text-align: center;
     margin-bottom: 50px;
 }
+.container .header h1{
+    color: #F9991D;
+} 
+
 
 .container h1,
-h2,
+h1,
 p {
     margin: 0;
     padding: 0;
 }
 
 .container h1 {
-    font-size: 32px;
+    /* font-size: 32px; */
     margin-bottom: 20px;
-    color: black;
+ 
 }
 
-.container h2 {
-    font-size: 24px;
+.container h1 {
+    /* font-size: 24px; */
     text-align: center;
     /* border-bottom: 2px solid white; */
     padding-bottom: 10px;
     margin-top: 20px;
-    color: black;
+    color: #F9991D;
 }
 
 .container p {
