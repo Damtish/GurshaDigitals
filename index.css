@@ -6,26 +6,38 @@ body {
 
 }
 
+.wrapper {
+  background-image: image-set('pics/21.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .navbar {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-top: 40px;
   padding-bottom: 30px;
-  background-color: rgba(255, 244, 244, 0.479);
+  background-color: transparent;
   /* Adjust the last value (0.5) for transparency */
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(25px);
   /* Adjust the blur value as desired */
   z-index: 9999;
   /* Adjust the z-index as needed */
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
+  transition: all 1s ease;
 
 }
 
+.navbar.scrolled {
+  background-color: rgba(255, 244, 244, 0.479)
+}
+
 .logo {
-  position: absolute;
+  position: fixed;
   width: 200px;
   margin-left: 10%;
   padding-top: 0px;
@@ -105,26 +117,29 @@ body {
 }
 
 .homepage {
-  background-image: image-set('marketing-branding-planning-vision-goals-concept.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   margin-bottom: 100px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .introduction {
+  width: 100%;
   display: flex;
-  width: 75%;
-  margin: 0 auto;
-  margin-top: 150px;
-  padding-bottom: 130px;
-
-
+  align-items: center;
+  justify-content: center;
 }
 
 .col1 {
-  width: 60%;
+  width: 100%;
   word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 2px white;
 }
 
 .col1 h1 {
@@ -132,17 +147,87 @@ body {
   font-size: 50px;
   text-transform: uppercase;
   line-height: 1.3em;
+  opacity: 0;
+  transform: translatex(-100px);
+  animation: a2 10s infinite;
+  animation-delay: 1s;
 }
 
-.col1 h5 {
+@keyframes a2 {
+
+  0%,
+  100% {
+
+    opacity: 0;
+    transform: translatex(-100px);
+
+  }
+
+  10%,
+  90% {
+    opacity: 1;
+    transform: translatex(0px);
+  }
+}
+
+.col1 .text-center {
   margin-top: 5px;
+  margin-bottom: 0px;
   font-size: 22px;
   font-weight: 400;
   text-transform: capitalize;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: appearAndDisappear 10s infinite;
+  animation-delay: 0.2s;
+
+}
+
+
+@keyframes appearAndDisappear {
+
+  0%,
+  100% {
+
+    opacity: 0;
+    transform: translateY(-100px);
+
+  }
+
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.text-bottom1 {
+  opacity: 0;
+  transform: translateY(100px);
+  animation: a3 10s infinite;
+  animation-delay: 1s;
+}
+
+@keyframes a3 {
+
+  0%,
+  100% {
+
+    opacity: 0;
+    transform: translateY(100px);
+
+  }
+
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .col1 .buttons {
   display: flex;
+
 }
 
 .col1 .buttons .service_btn,
@@ -155,6 +240,28 @@ body {
   padding: 15px 30px;
   border: 1px solid white;
   cursor: pointer;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: a4 infinite;
+  animation-duration: 10s;
+  animation-delay: 1.5s;
+}
+
+@keyframes a4 {
+
+  0%,
+  100% {
+
+    opacity: 0;
+    transform: translateY(100px);
+
+  }
+
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .col1 .buttons .request_btn {
@@ -168,9 +275,9 @@ body {
   color: black;
 }
 
-.col2 {
+/* .col2 {
   width: 40%;
-  /* background-color: #98B3BB; */
+  
 }
 
 .col2 .image {
@@ -182,9 +289,55 @@ body {
 
 .col2 .image img {
   width: 70%;
+} */
+
+
+
+.whoarewe {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: #222222;
+  border-radius: 50px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
 }
 
-.servicepage {}
+.whoarewe.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.whoarewe .content {
+  width: 50%;
+  text-align: justify;
+  color: rgb(150, 150, 150);
+  line-height: 2em;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.whoarewe .content h1 {
+  text-align: right;
+  color: white;
+}
+
+.whoarewe .image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.servicepage {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
 
 .title {
   text-transform: uppercase;
@@ -266,51 +419,84 @@ body {
   opacity: 1;
 }
 
-.whoarewe {
-  width: 80%;
+.video-background {
+  position: relative;
+  width: 90%;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  background-color: #222222;
-  margin-top: 150px;
-  border-radius: 50px;
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-
-}
-
-.whoarewe.show {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.whoarewe .content {
-  width: 50%;
-  text-align: justify;
-  color: rgb(150, 150, 150);
-  line-height: 2em;
-  margin-bottom: 50px;
-  margin-left: 50px;
-  margin-top: 50px;
-}
-
-.whoarewe .content h1 {
-  text-align: right;
-  color: white;
-}
-
-.whoarewe .image {
-  width: 50%;
+  height: 100%;
+  padding-bottom: 46.25%;
+  /* 16:9 aspect ratio */
   display: flex;
   align-items: center;
   justify-content: center;
-
+  margin-top: 100px;
 }
 
-.testimonials {
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-gallery {
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100px;
+  display: flex;
+  gap: 25px;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  padding: 10px;
+}
+
+.image-gallery img {
+  display: inline-block;
+      margin-right: 10px;
+      width: 150px;
+      height: 100px;
+      object-fit: contain;
+}
+.portfolio{
+  margin-top: 150px;
+}
+.portfolio .img-collection{
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
   width: 80%;
   margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.portfolio .img-collection .pic{
+  width: 300px;
+  overflow: hidden;
+  object-fit: fill;
+  height: auto;
+}
+.portfolio .img-collection img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+.portfolio .img-collection img:hover{
+ transform: scale(1.05);
+}
+/* .testimonials {
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 200px;
@@ -362,7 +548,7 @@ body {
   border-radius: 50%;
   align-self: center;
   background-color: #376982;
-}
+} */
 
 .contactus {
   display: flex;
@@ -497,12 +683,14 @@ body {
 }
 
 @media (max-width:1000px) {
-  .logo{
+  .logo {
     margin-left: 4%;
   }
-  .navbar-menu{
+
+  .navbar-menu {
     margin-right: 10%;
   }
+
   .col1 {
     width: 60%;
     word-wrap: break-word;
@@ -533,12 +721,14 @@ body {
 }
 
 @media (max-width:860px) {
-  .logo{
+  .logo {
     margin-left: 2%;
   }
-  .navbar-menu{
+
+  .navbar-menu {
     margin-right: 8%;
   }
+
   .whoarewe .content {
     width: 50%;
     text-align: start;

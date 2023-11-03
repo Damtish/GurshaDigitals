@@ -8,16 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="index.css">
+    <script src="jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/jquery.mb.YTPlayer.min.js"></script>
+
 </head>
 
 <body>
     <div class="wrapper">
-    
+
         <div class="logo">
-            <img src="URSHA_LOGO-removebg-preview.png" alt="">
+            <img src="pics/URSHA_LOGO-removebg-preview.png" alt="">
             <!-- <p>GURSHA DIGITALS</p> -->
         </div>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
 
             <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
             <label for="navbar-toggle" class="navbar-toggle-label">
@@ -35,29 +38,41 @@
             </ul>
         </nav>
         <div class="homepage">
-        <div class="introduction">
-            <div class="col1">
-                <h1>Elevate your brand with us.</h1>
-                <h5>let's feed your services & products to your clients/customers.</h5>
-                <h6>Gursha Digitals</h6>
+            <div class="introduction">
+                <div class="col1">
+                    <h5 class="text-center">let's feed your services & products to your clients/customers.</h5>
+                    <h1 class="text-left">Elevate your brand with us.</h1>
+                    <h5 class="text-bottom1">Gursha Digitals</h5>
 
-                <div class="buttons">
-<<<<<<< HEAD
-                    <button class="service_btn">OUR SERVICES</button>
-                    <!-- <button class="request_btn">REQUEST A QUOTE</button> -->
-=======
-                    <button     onclick="window.location.href = 'service.html';"  class="service_btn">OUR SERVICES</button>
-                    <button onclick="window.location.href = 'ContactPage.html';" class="request_btn">CONTACT US</button>
->>>>>>> 57665834aaa906700756c8361053acc81c3d68c4
+                    <div class="buttons">
+                        <button onclick="window.location.href = 'service.html';" class="service_btn">OUR
+                            SERVICES</button>
+                        <!-- <button onclick="window.location.href = 'ContactPage.html';" class="request_btn">CONTACT US</button> -->
+                    </div>
                 </div>
-            </div>
-            <div class="col2">
-                <div class="image">
-                    <!-- <img src="business-people-discussing-business-idea.svg" alt=""> -->
-                </div>
+                <!-- <div class="col2">
+                    <div class="image">
+                        <img src="business-people-discussing-business-idea.svg" alt="">
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
+    <div class="whoarewe" id="whoarewe">
+        <div class="content">
+            <h1>WHO WE ARE</h1>
+            <P>Gursha Digitals is an innovative digital marketing company offering a wide range of services. We
+                specialize in social media management, branding, video production, website development, event
+                organizing, talent management and boosting. With a passion for creativity and a deep understanding
+                of the digital
+                era, let's feed your services & products to your clients/customers. We are committed to delivering
+                exceptional results and making a positive impact in the digital world.</P>
+        </div>
+        <div class="image">
+            <img src="pics/URSHA_LOGO-removebg-preview.png" alt="">
+        </div>
+    </div>
+
     <div class="servicepage">
         <div class="title">
             <h1><span>Our </span>Services</h1>
@@ -65,12 +80,13 @@
         <div class="service_collection">
             <div class="digital_marketing services">
                 <div class="image-container">
-                    <img src="ad blue.png" alt="Blue Image" class="service_image blue" />
-                    <img src="ad white.png" alt="White Image" class="service_image white" />
+                    <img src="pics/ad blue.png" alt="Blue Image" class="service_image blue" />
+                    <img src="pics/ad white.png" alt="White Image" class="service_image white" />
                 </div>
                 <div class="content">
                     <h5>Digital marketing</h5>
-                    <p>Our ability to always exceed the expectations of our clients and produce the most creative output
+                    <p>Our ability to always exceed the expectations of our clients and produce the most creative
+                        output
                         is what makes us unique...</p>
 
                 </div>
@@ -78,12 +94,13 @@
             </div>
             <div class="sm_managment services">
                 <div class="image-container">
-                    <img src="social media blue.png" alt="Blue Image" class="service_image blue" />
-                    <img src="social media white.png" alt="White Image" class="service_image white" />
+                    <img src="pics/social media blue.png" alt="Blue Image" class="service_image blue" />
+                    <img src="pics/social media white.png" alt="White Image" class="service_image white" />
                 </div>
                 <div class="content">
                     <h5>Social Media Managment</h5>
-                    <p>More than just anything, We First Listen To You. We specifically put this fundamental in place
+                    <p>More than just anything, We First Listen To You. We specifically put this fundamental in
+                        place
                         and involve ourselves...</p>
 
                 </div>
@@ -92,12 +109,13 @@
 
             <div class="boosting services">
                 <div class="image-container">
-                    <img src="branding blue.png" alt="Blue Image" class="service_image blue" />
-                    <img src="branding white.png" alt="White Image" class="service_image white" />
+                    <img src="pics/branding blue.png" alt="Blue Image" class="service_image blue" />
+                    <img src="pics/branding white.png" alt="White Image" class="service_image white" />
                 </div>
                 <div class="content">
                     <h5>Boosting</h5>
-                    <p>Experience a transformative boost for your brand like never before.we'll accelerate your brand's
+                    <p>Experience a transformative boost for your brand like never before.we'll accelerate your
+                        brand's
                         visibility, engagement, and growth...</p>
 
                 </div>
@@ -106,8 +124,8 @@
 
             <div class="production services">
                 <div class="image-container">
-                    <img src="photography blue.png" alt="Blue Image" class="service_image blue" />
-                    <img src="photography white.png" alt="White Image" class="service_image white" />
+                    <img src="pics/photography blue.png" alt="Blue Image" class="service_image blue" />
+                    <img src="pics/photography white.png" alt="White Image" class="service_image white" />
                 </div>
                 <div class="content">
                     <h5>Video Production</h5>
@@ -120,8 +138,8 @@
 
             <div class="web_dev services">
                 <div class="image-container">
-                    <img src="CREATIVE SERVICES blue.png" alt="Blue Image" class="service_image blue" />
-                    <img src="CREATIVE SERVICES white.png" alt="White Image" class="service_image white" />
+                    <img src="pics/CREATIVE SERVICES blue.png" alt="Blue Image" class="service_image blue" />
+                    <img src="pics/CREATIVE SERVICES white.png" alt="White Image" class="service_image white" />
                 </div>
                 <div class="content">
                     <h5>Website Development</h5>
@@ -134,8 +152,8 @@
 
             <div class="e&t_managment services">
                 <div class="image-container">
-                    <img src="digitaL marketing blue.png" alt="Blue Image" class="service_image blue" />
-                    <img src="digitaL marketing white.png" alt="White Image" class="service_image white" />
+                    <img src="pics/digitaL marketing blue.png" alt="Blue Image" class="service_image blue" />
+                    <img src="pics/digitaL marketing white.png" alt="White Image" class="service_image white" />
                 </div>
                 <div class="content">
                     <h5>Event and Talent Managment</h5>
@@ -147,21 +165,49 @@
             </div>
         </div>
     </div>
-    <div class="whoarewe" id="whoarewe">
-        <div class="content">
-            <h1>WHO WE ARE</h1>
-            <P>Gursha Digitals is an innovative digital marketing company offering a wide range of services. We
-                specialize in social media management, branding, video production, website development, event
-                organizing, talent management and boosting. With a passion for creativity and a deep understanding of the digital
-                era, let's feed your services & products to your clients/customers. We are committed to delivering
-                exceptional results and making a positive impact in the digital world.</P>
-        </div>
-        <div class="image">
-            <img src="URSHA_LOGO-removebg-preview.png" alt="">
+    <div class="title">
+        <h1><span>Our </span>Projects</h1>
+    </div>
+    <div class="video-background">
+       
+        <div id="video-player"></div>
+        <div class="image-gallery" id="gallery">
+            <img src="pics/birhan bank.png" alt="">
+            <img src="pics/dhazaria.png" alt="">
+            <img src="pics/ICYpops.png" alt="">
+            <img src="pics/KD.png" alt="">
+            <img src="pics/kelati.png" alt="">
+            <img src="pics/mimi online.png" alt="">
+            <img src="pics/onesedi.png" alt="">
+            <img src="pics/soul fitness.png" alt="">
+            <img src="pics/yebihir.png" alt="">
+            <img src="pics/zuret.png" alt="">
+            <img src="pics/IMG_3126.PNG" alt="">
+            <img src="pics/new logo-08.png" alt="">
         </div>
     </div>
 
-    <div class="testimonials">
+    <div class="portfolio">
+        <div class="title">
+            <h1><span>Our </span>Portfolio</h1>
+        </div>
+        <div class="img-collection">
+            <div class="pic"> <img src="pics/1.jpg" alt=""></div>
+
+            <div class="pic"> <img src="pics/10.jpg" alt=""></div>
+            <div class="pic"> <img src="pics/101.jpg" alt=""></div>
+            <div class="pic"> <img src="pics/16.jpg" alt=""></div>
+            <div class="pic"> <img src="pics/HT3A1112.jpg" alt=""></div>
+            <div class="pic"> <img src="pics/36.jpg" alt=""></div>
+            <div class="pic"> <img src="pics/HT3A1082.jpg" alt=""></div>
+            <div class="pic"> <img src="pics/34.jpg" alt=""></div>
+            <div class="pic"> <img src="pics/18.jpg" alt=""></div>
+            <div class="pic"> <img src="pics/25.jpg" alt=""></div>
+            <div class="pic"> <img src="pics/HT3A1031.jpg" alt=""></div>
+        </div>
+    </div>
+
+    <!-- <div class="testimonials">
         <div class="title">
             <p>Testimonials</p>
             <h1>Read what they have to say</h1>
@@ -188,10 +234,10 @@
                     distinctio. Quos accusantium distinctio minus maiores, quo corporis nesciunt.</div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="contactus">
-        <div class="image"><img src="customer-support.svg" alt=""></div>
+        <div class="image"><img src="pics/customer-support.svg" alt=""></div>
         <div class="text">
             <h1>BE PART OF THE NEXT BIG THING</h1>
             <p>By joining forces, we magnify our impact and fuel collective growth.</p>
@@ -205,16 +251,16 @@
 
     <footer class="black-footer">
         <div class="footer-left">
-            <img src="URSHA_LOGO-removebg-preview.png" alt="">
+            <img src="pics/URSHA_LOGO-removebg-preview.png" alt="">
             <p class="company-quote">Elevate your brand with digital marketing mastery.</p>
             <p class="phone-number">Phone: 123-456-7890</p>
             <div class="social-icons">
-                <a href="#"><img src="Platform=Facebook, Color=Negative.png" alt="Facebook"></a>
-                <a href="#"><img src="Platform=Instagram, Color=Negative.png" alt="Instagram"></a>
-                <a href="#"><img src="Platform=LinkedIn, Color=Negative.png" alt="LinkedIn"></a>
-                <a href="#"><img src="Platform=Threads, Color=Negative.png" alt="Threads"></a>
-                <a href="#"><img src="Platform=Telegram, Color=Negative.png" alt="Telegram"></a>
-                <a href="#"><img src="Platform=X (Twitter), Color=Negative.png" alt="X"></a>
+                <a href="#"><img src="pics/Platform=Facebook, Color=Negative.png" alt="Facebook"></a>
+                <a href="#"><img src="pics/Platform=Instagram, Color=Negative.png" alt="Instagram"></a>
+                <a href="#"><img src="pics/Platform=LinkedIn, Color=Negative.png" alt="LinkedIn"></a>
+                <a href="#"><img src="pics/Platform=Threads, Color=Negative.png" alt="Threads"></a>
+                <a href="#"><img src="pics/Platform=Telegram, Color=Negative.png" alt="Telegram"></a>
+                <a href="#"><img src="pics/Platform=X (Twitter), Color=Negative.png" alt="X"></a>
             </div>
         </div>
         <div class="footer-right">
@@ -231,7 +277,7 @@
             <p class="company-name">GURSHA DIGITALS</p>
         </div>
     </footer>
-</div>
+
 </body>
 
 <script>
@@ -273,45 +319,45 @@
     observer2.observe(document.getElementById("whoarewe"));
 
     // Select the testimonials element
-    const testimonials = document.querySelector('.testimonials');
+    // const testimonials = document.querySelector('.testimonials');
 
-    // Define the options for the Intersection Observer
-    const options2 = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.2 // Adjust the threshold as needed
-    };
+    // // Define the options for the Intersection Observer
+    // const options2 = {
+    //     root: null,
+    //     rootMargin: '0px',
+    //     threshold: 0.2 // Adjust the threshold as needed
+    // };
 
-    // Create an Intersection Observer instance
-    const testimonialObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-                observer.unobserve(entry.target); // Stop observing once animated
-            }
-        });
-    }, options2);
+    // // Create an Intersection Observer instance
+    // const testimonialObserver = new IntersectionObserver((entries, observer) => {
+    //     entries.forEach((entry) => {
+    //         if (entry.isIntersecting) {
+    //             entry.target.classList.add('animate');
+    //             observer.unobserve(entry.target); // Stop observing once animated
+    //         }
+    //     });
+    // }, options2);
 
-    // Observe the testimonials element
-    testimonialObserver.observe(testimonials);
+    // // Observe the testimonials element
+    // testimonialObserver.observe(testimonials);
 
-    // Select the person elements
-    const personElements = document.querySelectorAll('.person');
+    // // Select the person elements
+    // const personElements = document.querySelectorAll('.person');
 
-    // Create a separate Intersection Observer for the person elements
-    const personObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-                observer.unobserve(entry.target); // Stop observing once animated
-            }
-        });
-    }, options2);
+    // // Create a separate Intersection Observer for the person elements
+    // const personObserver = new IntersectionObserver((entries, observer) => {
+    //     entries.forEach((entry) => {
+    //         if (entry.isIntersecting) {
+    //             entry.target.classList.add('animate');
+    //             observer.unobserve(entry.target); // Stop observing once animated
+    //         }
+    //     });
+    // }, options2);
 
-    // Observe each person element
-    personElements.forEach((element) => {
-        personObserver.observe(element);
-    });
+    // // Observe each person element
+    // personElements.forEach((element) => {
+    //     personObserver.observe(element);
+    // });
 
     const navbarToggle = document.getElementById('navbar-toggle');
     const navbarToggleLabel = document.querySelector('.navbar-toggle-label');
@@ -322,6 +368,41 @@
         } else {
             navbarToggleLabel.classList.remove('active');
         }
+    });
+
+    window.addEventListener('scroll', function () {
+        var menu = document.getElementById('navbar');
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition > 600) { // Change the value to the desired scroll position
+            menu.classList.add('scrolled');
+        } else {
+            menu.classList.remove('scrolled');
+        }
+    });
+    $(function () {
+        $("#video-player").YTPlayer({
+            videoURL: "https://www.youtube.com/watch?v=UVAyIh5V4NY",
+            containment: '.video-background',
+            mute: true,
+            autoplay: true,
+            loop: true,
+            showControls: false
+        });
+
+        var galleryContainer = document.getElementById('gallery');
+        var scrollAmount = 1.5; // Adjust the scroll amount as needed
+        var scrollDelay = 20; // Adjust the scroll delay (in milliseconds) as needed
+
+        galleryContainer.addEventListener('scroll', function () {
+            if (galleryContainer.scrollLeft + galleryContainer.clientWidth >= galleryContainer.scrollWidth) {
+                galleryContainer.scrollLeft = 0;
+            }
+        });
+
+        setInterval(function () {
+            galleryContainer.scrollLeft += scrollAmount;
+        }, scrollDelay);
     });
 
 </script>

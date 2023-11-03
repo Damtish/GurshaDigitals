@@ -5,15 +5,11 @@ html {
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-<<<<<<< HEAD
-    background-color: #F9991D;
-=======
     scroll-behavior: smooth;
->>>>>>> 57665834aaa906700756c8361053acc81c3d68c4
 }
 
 .homepage {
-    background-image: image-set('background.svg');
+    background-image: image-set('pics/background.svg');
     width: 100%;
 }
 
