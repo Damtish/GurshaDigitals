@@ -7,10 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="service.css">
-    <title>Document</title>
+    <title>Gursha Digitals- Services</title>
+    <link rel="icon" href="pics/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+    <div class="loading-screen">
+        <img src="pics/loading-screen.png" alt="">
+      </div>
     <div class="wrapper">
         <div class="logo">
             <img src="pics/URSHA_LOGO-removebg-preview.png" alt="">
@@ -334,8 +338,12 @@
 
 </body>
 <script>
-
-window.addEventListener('scroll', function () {
+    window.addEventListener('load', function () {
+        var loadingScreen = document.querySelector('.loading-screen');
+        loadingScreen.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    });
+    window.addEventListener('scroll', function () {
         var menu = document.getElementById('navbar');
         var scrollPosition = window.scrollY;
 

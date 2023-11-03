@@ -4,98 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YouTube Video Background with Image Gallery</title>
-  <script src="jquery.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/jquery.mb.YTPlayer.min.js"></script>
+  <title>Loading Screen Example</title>
   <style>
     body {
       margin: 0;
       padding: 0;
+      overflow: hidden;
     }
 
-    .video-background {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      padding-bottom: 56.25%;
-      /* 16:9 aspect ratio */
-      display: flex;
-    }
-
-    .video-background iframe {
-      position: absolute;
+    .loading-screen {
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-    }
-
-    .image-gallery {
-      width: 50%;
-      overflow: hidden;
-      white-space: nowrap;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 100px;
+      background-color: rgba(0, 0, 0, 0.1);
+    /* Adjust the last value (0.5) for transparency */
+    backdrop-filter: blur(10px);
       display: flex;
-      justify-content: flex-start;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      z-index: 9999;
     }
 
-    .image-gallery img {
-      display: inline-block;
-      margin-right: 10px;
-      height: 100px;
-      object-fit: contain;
+
+    .loading-screen img{
+      animation: rotate 1.5s infinite linear;
+    }
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="video-background">
-    <div id="video-player"></div>
-    <div class="image-gallery" id="gallery">
-      <img src="pics/birhan bank.png" alt="">
-      <img src="pics/dhazaria.png" alt="">
-      <img src="pics/ICYpops.png" alt="">
-      <img src="pics/KD.png" alt="">
-      <img src="pics/kelati.png" alt="">
-      <img src="pics/mimi online.png" alt="">
-      <img src="pics/onesedi.png" alt="">
-      <img src="pics/soul fitness.png" alt="">
-      <img src="pics/yebihir.png" alt="">
-      <img src="pics/zuret.png" alt="">
-      <img src="pics/IMG_3126.PNG" alt="">
-      <img src="pics/new logo-08.png" alt="">
-    </div>
+  <div class="loading-screen">
+    <img src="pics/loading-screen.png" alt="">
   </div>
+  
+
+  <!-- Rest of your page content -->
 
   <script>
-    $(function () {
-      $("#video-player").YTPlayer({
-        videoURL: "https://www.youtube.com/watch?v=UVAyIh5V4NY",
-        containment: '.video-background',
-        mute: true,
-        autoplay: true,
-        loop: true,
-        showControls: false
-      });
-
-      var galleryContainer = document.getElementById('gallery');
-      var scrollAmount = 2; // Adjust the scroll amount as needed
-      var scrollDelay = 20; // Adjust the scroll delay (in milliseconds) as needed
-
-      galleryContainer.addEventListener('scroll', function () {
-        if (galleryContainer.scrollLeft + galleryContainer.clientWidth >= galleryContainer.scrollWidth) {
-          galleryContainer.scrollLeft = 0;
-        }
-      });
-
-      setInterval(function () {
-        galleryContainer.scrollLeft += scrollAmount;
-      }, scrollDelay);
+    window.addEventListener('load', function () {
+      var loadingScreen = document.querySelector('.loading-screen');
+      loadingScreen.style.display = 'none';
+      document.body.style.overflow = 'auto';
     });
   </script>
 </body>

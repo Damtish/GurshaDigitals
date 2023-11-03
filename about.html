@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gursha Digitals- About Us</title>
+    <link rel="icon" href="pics/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="about.css">
 </head>
 
 <body>
+    <div class="loading-screen">
+        <img src="pics/loading-screen.png" alt="">
+      </div>
     <div class="wrapper">
         <div class="logo">
             <img src="pics/URSHA_LOGO-removebg-preview.png" alt="">
@@ -239,6 +243,12 @@
 
 </body>
 <script>
+    window.addEventListener('load', function () {
+      var loadingScreen = document.querySelector('.loading-screen');
+      loadingScreen.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    });
+
     const navbarToggle = document.getElementById('navbar-toggle');
     const navbarToggleLabel = document.querySelector('.navbar-toggle-label');
 

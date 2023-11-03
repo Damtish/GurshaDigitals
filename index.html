@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gursha Digitals- Home</title>
+    <link rel="icon" href="pics/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
     <link rel="stylesheet" href="index.css">
     <script src="jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/jquery.mb.YTPlayer.min.js"></script>
@@ -14,6 +16,9 @@
 </head>
 
 <body>
+    <div class="loading-screen">
+        <img src="pics/loading-screen.png" alt="">
+      </div>
     <div class="wrapper">
 
         <div class="logo">
@@ -281,6 +286,11 @@
 </body>
 
 <script>
+    window.addEventListener('load', function () {
+      var loadingScreen = document.querySelector('.loading-screen');
+      loadingScreen.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    });
     // Select the service elements
     const serviceElements = document.querySelectorAll('.services');
 
