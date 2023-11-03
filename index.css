@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #2A6482;
+ 
   overflow-x: hidden;
 
 }
@@ -47,12 +47,17 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: image-set('pics/marketing-branding-planning-vision-goals-concept.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.3; /* Adjust opacity as desired */
+  
+}
+.wrapper{
+  height: 100vh;
+  background-color: #111111;
 }
 
 
@@ -161,8 +166,9 @@ body {
 }
 
 .homepage {
-  margin-bottom: 100px;
-  height: 100vh;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,7 +194,7 @@ body {
 
 .col1 h1 {
   margin-bottom: 0;
-  font-size: 50px;
+  font-size: 60px;
   text-transform: uppercase;
   line-height: 1.3em;
   opacity: 0;
@@ -217,7 +223,7 @@ body {
 .col1 .text-center {
   margin-top: 5px;
   margin-bottom: 0px;
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 400;
   text-transform: capitalize;
   opacity: 0;
@@ -250,6 +256,7 @@ body {
   transform: translateY(100px);
   animation: a3 10s infinite;
   animation-delay: 1s;
+  font-size: 20px;
 }
 
 @keyframes a3 {
@@ -289,6 +296,7 @@ body {
   animation: a4 infinite;
   animation-duration: 10s;
   animation-delay: 1.5s;
+  transition: all 0.3s ease;
 }
 
 @keyframes a4 {
@@ -314,7 +322,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.col1 .buttons .request_btn:hover {
+.col1 .buttons .service_btn:hover,.col1 .buttons .request_btn:hover {
   background-color: white;
   color: black;
 }
@@ -335,7 +343,11 @@ body {
   width: 70%;
 } */
 
-
+.wrapper2{
+  padding-top: 100px;
+  background-color: #2A6482;
+  padding-bottom: 200px;
+}
 
 .whoarewe {
   width: 80%;
@@ -347,7 +359,7 @@ body {
   opacity: 0;
   transform: translateX(-100px);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-
+  
 }
 
 .whoarewe.show {
@@ -652,7 +664,7 @@ body {
   background-color: #111111;
   color: #ffffff;
   padding: 50px;
-  margin-top: 200px;
+  
 }
 
 .footer-left {
@@ -732,6 +744,9 @@ body {
   .col1 h5 {
     font-size: 17px;
   }
+  .wrapper::before,.wrapper{
+    height: 80vh;
+  }
 }
 
 @media (max-width:1000px) {
@@ -742,12 +757,16 @@ body {
   .navbar-menu {
     margin-right: 10%;
   }
-
+  .wrapper::before,.wrapper{
+    height: 75vh;
+  }
   .col1 {
     width: 100%;
     word-wrap: break-word;
   }
-
+  .col1 .text-center {
+    font-size: 20px;  
+  }
   .col1 h1 {
     margin-bottom: 0;
     font-size: 40px;
@@ -777,7 +796,9 @@ body {
   .logo {
     margin-left: 2%;
   }
-
+  .wrapper::before,.wrapper{
+    height: 65vh;
+  }
   .navbar-menu {
     margin-right: 8%;
   }
@@ -893,9 +914,10 @@ body {
   .navbar-toggle:checked+.navbar-toggle-label .hamburger-line:nth-child(3) {
     transform: rotate(-45deg) translate(4px, -3px);
   }
-
-  .wrapper::before{
-    height: 80vh;
+  
+  .wrapper::before,.wrapper{
+    height: 60vh;
+    
   }
   .homepage{
     margin-bottom: 0px;
@@ -905,18 +927,20 @@ body {
     display: flex;
     width: 85%;
     margin: 0 auto;
-    margin-top: 100px;
     text-align: center;
     margin-top: 0px;
 
+  }
+  .col1 .text-center {
+    font-size: 16px;  
   }
 
   .col1 h1 {
     font-size: 35px;
   }
 
-  .col1 h5 {
-    font-size: 17px;
+  .col1 .text-bottom1 {
+    font-size: 15px;
   }
 
   .whoarewe {
@@ -960,6 +984,9 @@ body {
 
 @media (max-width:680px) {
 
+  .wrapper::before,.wrapper{
+    height: 60vh;
+  }
   .introduction {
     flex-direction: column;
     
@@ -982,6 +1009,9 @@ body {
     font-size: 12px;
     font-weight: 400;
     text-transform: capitalize;
+  }
+  .wrapper2{
+    padding-bottom: 70px;
   }
   .image-gallery {
     width: 80%;
@@ -1009,7 +1039,9 @@ body {
         height: 50px;
         object-fit: contain;
   }
-
+  .contactus{
+    margin-top: 100px;
+  }
   .contactus .image {
     width: 0%;
     display: flex;
@@ -1073,8 +1105,8 @@ body {
 }
 
 @media (max-width:490px) {
-  .wrapper::before{
-    height: 80vh;
+  .wrapper::before,.wrapper{
+    height: 60vh;
   }
   .introduction,.homepage {
     margin-top: 0px;

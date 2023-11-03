@@ -47,14 +47,17 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-image: image-set('pics/creative-light-bulb-abstract-glowing-blue-background-generative-ai.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.2; /* Adjust opacity as desired */
-    z-index: -1;
+    opacity: 0.5; /* Adjust opacity as desired */
+    
+  }
+  .wrapper{
     background-color: #000000;
+    height: 100vh;
   }
 
 .navbar {
@@ -73,6 +76,7 @@ body {
     width: 100%;
     top: 0;
     transition: all 0.5s ease;
+   
 
 }
 .navbar.scrolled {
@@ -119,7 +123,7 @@ body {
     display: block;
     width: 20px;
     height: 2px;
-    background-color: black;
+    background-color: white;
     transition: all 0.3s ease;
 }
 
@@ -147,7 +151,7 @@ body {
 
 .navbar-menu li a {
     text-decoration: none;
-    color: black;
+    color: #fff;
     transition: 0.3s ease;
     padding: 10px;
     border-radius: 10px;
@@ -159,25 +163,28 @@ body {
 }
 
 .homepage {
-    margin-top: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-
+    width: 100%;
+    z-index: 10000;
 }
 
 .introduction {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 75%;
+    height: 100%;
     margin: 0 auto;
-    padding-bottom: 150px;
-
+    z-index: 99;
 
 }
 
 .col1 {
     width: 100%;
+    height: 100%;
     word-wrap: break-word;
     /* text-shadow: 1px 1px 2px white; */
     display: flex;
@@ -185,6 +192,8 @@ body {
     align-items: center;
     justify-content: center;
     color: #fffefc;
+    text-align: center;
+
 }
 
 .col1 h1 {
@@ -192,7 +201,7 @@ body {
     font-size: 50px;
     text-transform: uppercase;
     line-height: 1.3em;
-    color: black;
+
 }
 
 .col1 h5 {
@@ -265,7 +274,7 @@ body {
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05), 0 1.5rem 2.2rem rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s ease-in;
-    background-color: #2A6482;
+    background-color: white;
     width: 350px;
     height: auto;
     margin-top: 50px;
@@ -277,13 +286,16 @@ body {
 .total-information .note h4,p {
     color: white ;
 }
+.total-information .note h4{
+    color: black;
+}
 .total-information .info .notes .note.animate {
     opacity: 1;
     transform: translateX(0);
   }
 
 .total-information .info .notes .note p{
-    color: black;
+    color: gray;
     
 }
 .total-information .info .notes .note:hover{
@@ -515,9 +527,7 @@ body {
         transform: rotate(-45deg) translate(4px, -3px);
     }
 
-    .wrapper::before {
-        height: 65vh;
-      }
+
 
     .introduction {
         display: flex;
@@ -542,6 +552,9 @@ body {
 }
 
 @media (max-width:680px) {
+    .wrapper,.wrapper::before{
+        height: 85vh;
+    }
     .introduction {
         flex-direction: column;
     }
