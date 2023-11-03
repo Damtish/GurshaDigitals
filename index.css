@@ -5,12 +5,21 @@ body {
   overflow-x: hidden;
 
 }
-
-.wrapper {
-  background-image: image-set('pics/21.png');
+.wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: image-set('pics/marketing-branding-planning-vision-goals-concept.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5; /* Adjust opacity as desired */
 }
+
 
 .navbar {
   display: flex;
@@ -374,11 +383,18 @@ body {
   transition: opacity 0.5s, transform 0.5s;
   cursor: pointer;
 }
+.pic{
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.5s, transform 0.5s;
+}
 
-.services.animate {
+.services.animate,.pic.animate {
   opacity: 1;
   transform: translateX(0);
 }
+
+
 
 .services .content {
   margin-top: 50px;
@@ -693,7 +709,7 @@ body {
   }
 
   .col1 {
-    width: 60%;
+    width: 100%;
     word-wrap: break-word;
   }
 
@@ -710,10 +726,11 @@ body {
     font-weight: 400;
     text-transform: capitalize;
   }
-
-  .col2 .image img {
-    width: 100%;
+  .image-gallery {
+    width: 60%;
+    height: 80px;
   }
+
 
   .contactus {
     width: 95%;
@@ -842,12 +859,11 @@ body {
     transform: rotate(-45deg) translate(4px, -3px);
   }
 
-  .homepage {
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: unset;
-    margin-bottom: 100px;
+  .wrapper::before{
+    height: 80vh;
+  }
+  .homepage{
+    margin-bottom: 0px;
   }
 
   .introduction {
@@ -855,6 +871,8 @@ body {
     width: 85%;
     margin: 0 auto;
     margin-top: 100px;
+    text-align: center;
+    margin-top: 0px;
 
   }
 
@@ -906,8 +924,10 @@ body {
 
 
 @media (max-width:680px) {
+
   .introduction {
     flex-direction: column;
+    
   }
 
   .col1 {
@@ -928,18 +948,31 @@ body {
     font-weight: 400;
     text-transform: capitalize;
   }
-
-  .col2 {
-    width: 100%;
+  .image-gallery {
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    display: flex;
+    gap: 25px;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 10px;
   }
 
-  .col2 .image {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .col2 .image img {
-    width: 50%;
+  .image-gallery img {
+    display: inline-block;
+        margin-right: 10px;
+        width: 150px;
+        height: 50px;
+        object-fit: contain;
   }
 
   .contactus .image {
@@ -1005,8 +1038,12 @@ body {
 }
 
 @media (max-width:490px) {
-  .introduction {
-    margin-top: 50px;
+  .wrapper::before{
+    height: 80vh;
+  }
+  .introduction,.homepage {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .col1 h1 {
@@ -1023,9 +1060,6 @@ body {
     text-transform: capitalize;
   }
 
-  .col2 .image img {
-    width: 70%;
-  }
 
   .col1 .buttons .service_btn,
   .request_btn {
@@ -1065,6 +1099,22 @@ body {
     width: 80px;
 
   }
+  .video-background {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+    padding-bottom: 66.25%;
+    /* 16:9 aspect ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  
+  
+  
+  
 
   .testimonials .people .person {
     width: 100%;

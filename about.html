@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="about.css">
 </head>
 
-<body><div class="logo">
+<body>
+    <div class="wrapper">
+        <div class="logo">
             <img src="pics/URSHA_LOGO-removebg-preview.png" alt="">
-            <p>Gursha digitals</p>
+            <!-- <p>GURSHA DIGITALS</p> -->
         </div>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
 
             <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
             <label for="navbar-toggle" class="navbar-toggle-label">
@@ -25,25 +27,27 @@
                 </span>
             </label>
             <ul class="navbar-menu">
-                <li><a href="index.html">Home</a></li>
+                <li><a  href="index.html">Home</a></li>
                 <li><a id="about" href="about.html">About</a></li>
                 <li><a href="service.html">Services</a></li>
                 <li><a href="ContactPage.html">Contact</a></li>
             </ul>
         </nav>
-    <div class="homepage">
-        
-        <div class="introduction">
-            <div class="logo2">
-                <img src="pics/URSHA_LOGO-removebg-preview.png" alt="">
-                <p>Gursha digitals</p>
-            </div>
-            <div class="col2">
-                <div class="image">
-                    <!-- <img src="businessman-getting-late-for-work.svg" alt=""> -->
+        <div class="homepage">
+
+            <div class="introduction">
+                <div class="logo2">
+                    <img src="pics/URSHA_LOGO-removebg-preview.png" alt="">
+                    <p>Gursha digitals</p>
                 </div>
+                <!-- <div class="col2">
+                    <div class="image">
+                        <img src="businessman-getting-late-for-work.svg" alt="">
+                    </div>
+                </div> -->
             </div>
         </div>
+
     </div>
     <div class="servicepage">
         <div class="service_collection">
@@ -145,8 +149,12 @@
     <div class="container2">
         <div class="text">
             <h1>WELCOME TO <br> <span class="company-name">GURHSA DIGITALS</span></h1>
-            <p>We are the leading digital marketing and website design company in Ethiopia. Founded in 2023, We are ready to elevate your brand with us.</p>
-            <p>We specialize in  <strong>social media management, branding, video production, website development, event organizing, talent management and boosting. </strong>With a passion for creativity and a deep understanding of the digital era, let's feed your services & products to your clients/customers. We are committed to delivering exceptional results and making a positive impact in the digital world.</p>
+            <p>We are the leading digital marketing and website design company in Ethiopia. Founded in 2023, We are
+                ready to elevate your brand with us.</p>
+            <p>We specialize in <strong>social media management, branding, video production, website development, event
+                    organizing, talent management and boosting. </strong>With a passion for creativity and a deep
+                understanding of the digital era, let's feed your services & products to your clients/customers. We are
+                committed to delivering exceptional results and making a positive impact in the digital world.</p>
             <p>At <span class="company-name">Gursha Digitals</span>, we understand the ever-evolving digital landscape
                 and stay up-to-date with the latest trends and technologies. We are committed to providing you with
                 cutting-edge solutions that meet your unique requirements.</p>
@@ -177,7 +185,7 @@
         </div>
     </div>
     </div> -->
-    <div class="container">
+    <div class="container" id="container">
         <div class="header">
             <h1> VISION</h1>
             <p>TO BE THE BEST DIGITAL MARKETERS AND PROMOTERS IN AFRICA</p>
@@ -241,6 +249,52 @@
             navbarToggleLabel.classList.remove('active');
         }
     });
+
+    window.addEventListener('scroll', function () {
+        var menu = document.getElementById('navbar');
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition > 600) { // Change the value to the desired scroll position
+            menu.classList.add('scrolled');
+        } else {
+            menu.classList.remove('scrolled');
+        }
+    });
+
+    const serviceElements = document.querySelectorAll('.services');
+
+// Define the options for the Intersection Observer
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2 // Adjust the threshold as needed
+};
+
+// Create an Intersection Observer instance
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('animate');
+            }, index * 200); // Adjust the delay time as needed
+            observer.unobserve(entry.target); // Stop observing once animated
+        }
+    });
+}, options);
+
+// Observe each service element
+serviceElements.forEach((element) => {
+    observer.observe(element);
+});
+const observer2 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    });
+
+    observer2.observe(document.getElementById("container"));
 </script>
 
 </html>

@@ -5,8 +5,25 @@ body {
     overflow-x: hidden;
 
 }
+.wrapper::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background-image: image-set('pics/creative-light-bulb-abstract-glowing-blue-background-generative-ai.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3; /* Adjust opacity as desired */
+    z-index: -1;
+    background-color: #000000;
+  }
 
 .navbar {
+    position: fixed;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -16,13 +33,18 @@ body {
     /* Adjust the last value (0.5) for transparency */
     backdrop-filter: blur(10px);
     /* Adjust the blur value as desired */
-    z-index: 9999;
+    z-index: 999;
     /* Adjust the z-index as needed */
+    width: 100%;
+    top: 0;
+    transition: all 0.5s ease;
 
 }
-
+.navbar.scrolled {
+    background-color: rgba(255, 244, 244, 0.479)
+  }
 .logo {
-    position: absolute;
+    position: fixed;
     width: 200px;
     margin-left: 10%;
     padding-top: 0px;
@@ -31,6 +53,7 @@ body {
     /* Adjust the z-index as needed */
     align-items: center;
     padding-top: 10px;
+    top: 0;
 }
 
 .logo img {
@@ -101,26 +124,31 @@ body {
 }
 
 .homepage {
-    background-image: image-set('creative-light-bulb-abstract-glowing-blue-background-generative-ai.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 100px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
 }
 
 .introduction {
     display: flex;
     width: 75%;
     margin: 0 auto;
-    margin-top: 150px;
-    padding-bottom: 130px;
+    padding-bottom: 150px;
 
 
 }
 
 .col1 {
-    width: 60%;
+    width: 100%;
     word-wrap: break-word;
+    text-shadow: 1px 1px 2px white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .col1 h1 {
@@ -159,9 +187,9 @@ body {
     color: black;
 }
 
-.col2 {
+/* .col2 {
     width: 40%;
-    /* background-color: #98B3BB; */
+    
 }
 
 .col2 .image {
@@ -173,7 +201,7 @@ body {
 
 .col2 .image img {
     width: 70%;
-}
+} */
 .total-information{
     width: 75%;
     margin: 0 auto;
@@ -198,13 +226,8 @@ body {
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05), 0 1.5rem 2.2rem rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s ease-in;
-<<<<<<< HEAD
-    background-color: #000000;
+    background-color: #2A6482;
     width: 350px;
-=======
-    background-color: #FFFFFF;
-    width: 340px;
->>>>>>> 57665834aaa906700756c8361053acc81c3d68c4
     height: auto;
     margin-top: 50px;
     opacity: 0;
@@ -219,17 +242,6 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
-
-/* .info {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
-} */
 
 .total-information .info .notes .note p{
     color: gray;
@@ -356,7 +368,7 @@ body {
         margin-right: 10%;
       }
     .col1 {
-        width: 60%;
+        width: 100%;
         word-wrap: break-word;
     }
 
@@ -372,10 +384,6 @@ body {
         font-size: 19px;
         font-weight: 400;
         text-transform: capitalize;
-    }
-
-    .col2 .image img {
-        width: 100%;
     }
 
 
@@ -467,13 +475,9 @@ body {
         transform: rotate(-45deg) translate(4px, -3px);
     }
 
-    .homepage {
-
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: unset;
-        margin-bottom: 100px;
-    }
+    .wrapper::before {
+        height: 65vh;
+      }
 
     .introduction {
         display: flex;
@@ -521,19 +525,6 @@ body {
         text-transform: capitalize;
     }
 
-    .col2 {
-        margin-top: 40px;
-        width: 100%;
-    }
-
-    .col2 .image {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .col2 .image img {
-        width: 50%;
-    }
     .total-information{
         width: 90%;
         margin: 0 auto;

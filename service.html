@@ -11,12 +11,12 @@
 </head>
 
 <body>
-    <div class="homepage">
+    <div class="wrapper">
         <div class="logo">
             <img src="pics/URSHA_LOGO-removebg-preview.png" alt="">
             <p>GURSHA DIGITALS</p>
         </div>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
 
             <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
             <label for="navbar-toggle" class="navbar-toggle-label">
@@ -33,23 +33,28 @@
                 <li><a href="ContactPage.html">Contact</a></li>
             </ul>
         </nav>
-        <div class="introduction">
-            <div class="col1">
-                <h1>Services</h1>
-                <h5>At GURHSA DIGITALS, we pride ourselves on providing a diverse range of high-quality services to
-                    meet your business needs. Our dedicated team of professionals is committed to delivering exceptional
-                    results and helping your business thrive. </h5>
-                <div class="buttons">
-                    <button onclick="window.location.href = 'ContactPage.html';" class="request_btn">Contact Us</button>
+        <div class="homepage">
+            <div class="introduction">
+                <div class="col1">
+                    <h1>Services</h1>
+                    <h5>At GURHSA DIGITALS, we pride ourselves on providing a diverse range of high-quality services to
+                        meet your business needs. Our dedicated team of professionals is committed to delivering
+                        exceptional
+                        results and helping your business thrive. </h5>
+                    <div class="buttons">
+                        <button onclick="window.location.href = 'ContactPage.html';" class="request_btn">Contact
+                            Us</button>
+                    </div>
                 </div>
-            </div>
-            <div class="col2">
-                <div class="image">
-                    <!-- <img src="online-business-marketing.svg" alt=""> -->
-                </div>
+                <!-- <div class="col2">
+                    <div class="image">
+                        <img src="online-business-marketing.svg" alt="">
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
+
     <div class="total-information">
         <div class="digital-marketing info">
             <h1>Digital Marketing 🎯</h1>
@@ -329,6 +334,19 @@
 
 </body>
 <script>
+
+window.addEventListener('scroll', function () {
+        var menu = document.getElementById('navbar');
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition > 600) { // Change the value to the desired scroll position
+            menu.classList.add('scrolled');
+        } else {
+            menu.classList.remove('scrolled');
+        }
+    });
+
+
     const navbarToggle = document.getElementById('navbar-toggle');
     const navbarToggleLabel = document.querySelector('.navbar-toggle-label');
 
@@ -362,32 +380,34 @@
         observer.observe(info);
     });
 
-    
+
     const noteElements = document.querySelectorAll('.note');
 
-// Define the options for the Intersection Observer
-const options2 = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.2 // Adjust the threshold as needed
-};
+    // Define the options for the Intersection Observer
+    const options2 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2 // Adjust the threshold as needed
+    };
 
-// Create an Intersection Observer instance
-const observer2 = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.classList.add('animate');
-            }, index * 200); // Adjust the delay time as needed
-            observer.unobserve(entry.target); // Stop observing once animated
-        }
+    // Create an Intersection Observer instance
+    const observer2 = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('animate');
+                }, index * 200); // Adjust the delay time as needed
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, options2);
+
+    // Observe each service element
+    noteElements.forEach((element) => {
+        observer2.observe(element);
     });
-}, options2);
 
-// Observe each service element
-noteElements.forEach((element) => {
-    observer2.observe(element);
-});
+
 </script>
 
 </html>
