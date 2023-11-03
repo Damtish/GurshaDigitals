@@ -52,7 +52,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.3; /* Adjust opacity as desired */
+    opacity: 0.2; /* Adjust opacity as desired */
     z-index: -1;
     background-color: #000000;
   }
@@ -179,11 +179,12 @@ body {
 .col1 {
     width: 100%;
     word-wrap: break-word;
-    text-shadow: 1px 1px 2px white;
+    /* text-shadow: 1px 1px 2px white; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #fffefc;
 }
 
 .col1 h1 {
@@ -191,6 +192,7 @@ body {
     font-size: 50px;
     text-transform: uppercase;
     line-height: 1.3em;
+    color: black;
 }
 
 .col1 h5 {
@@ -198,6 +200,7 @@ body {
     font-size: 22px;
     font-weight: 400;
     text-transform: capitalize;
+ 
 }
 
 .col1 .buttons {
@@ -254,6 +257,7 @@ body {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+
 }
 .total-information .info .notes .note{
     border-radius: 10px;
@@ -266,8 +270,8 @@ body {
     height: auto;
     margin-top: 50px;
     opacity: 0;
-  transform: translateX(100px);
-  transition: opacity 0.5s, transform 0.5s;
+    transform: translateX(100px);
+    transition: opacity 0.5s, transform 0.5s;
     
 }
 .total-information .note h4,p {
@@ -279,7 +283,8 @@ body {
   }
 
 .total-information .info .notes .note p{
-    color: gray;
+    color: black;
+    
 }
 .total-information .info .notes .note:hover{
     transform: translateY(-10px);
