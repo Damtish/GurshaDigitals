@@ -484,6 +484,7 @@ body {
   overflow: hidden;
   object-fit: fill;
   height: auto;
+  border-radius: 15px;
 }
 .portfolio .img-collection img{
   width: 100%;
