@@ -20,7 +20,7 @@
             <img src="pics/URSHA_LOGO-removebg-preview.png" alt="">
             <p>Gursha digitals</p>
         </div>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
 
             <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
             <label for="navbar-toggle" class="navbar-toggle-label">
@@ -148,6 +148,17 @@
     </footer>
 </body>
 <script>
+    window.addEventListener('scroll', function () {
+        var menu = document.getElementById('navbar');
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition > 450) { // Change the value to the desired scroll position
+            menu.classList.add('scrolled');
+        } else {
+            menu.classList.remove('scrolled');
+        }
+    });
+
     window.addEventListener('load', function () {
       var loadingScreen = document.querySelector('.loading-screen');
       loadingScreen.classList.add('hidden');
