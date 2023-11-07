@@ -215,7 +215,7 @@ body {
     width: 70%;
   } */
 .wrapper2{
-  background-color: #2A6482;
+  /* background-color: #2A6482; */
   padding-top: 50px;
   padding-bottom: 200px;
 }
@@ -236,17 +236,18 @@ body {
 .services {
     position: relative;
     display: flex;
-    width: 280px;
+    width: 300px;
+    height: 200px;
     color: #909090;
     flex-direction: column;
-    background-color: #222222;
-    padding: 20px;
-    border-radius: 10px;
+    background: linear-gradient(to bottom, #21758F, #222222);    border-radius: 10px;
     opacity: 0;
   transform: translateX(100px);
   transition: opacity 0.5s, transform 0.5s,background-color 0.8s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 1), 0 2px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
+    text-align: center;
+  
 }
 .services.animate {
     opacity: 1;
@@ -268,8 +269,8 @@ body {
 
 .service_image {
     position: absolute;
-    top: 10px;
-    left: 15px;
+    /* top: px; */
+    left: 125px;
     width: 50px;
     height: 50px;
     opacity: 1;
@@ -364,7 +365,7 @@ background-color: #21758F;
 }
 
 .container2 .text p strong{
-    color: white;
+    color: #2A6482;
     left: 50%;
 }
 
@@ -395,7 +396,7 @@ strong {
 
 .company-name {
     font-weight: bold;
-    color: white;
+    color: #2A6482;
 }
 
 .container {
@@ -403,8 +404,7 @@ strong {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    background-color: #04141c;
-    color: white;
+    background: linear-gradient(to bottom, #21758F, #222222);    color: white;
     padding: 50px;
     margin: 0 auto;
     margin-bottom: 50px;
@@ -462,6 +462,9 @@ p {
   background-color: #111111;
   color: #ffffff;
   padding: 50px;
+  border-radius: 50% / 30px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .footer-left {

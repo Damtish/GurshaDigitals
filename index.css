@@ -665,6 +665,9 @@ body {
   background-color: #111111;
   color: #ffffff;
   padding: 50px;
+  border-radius: 50% / 30px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   
 }
 
@@ -1067,6 +1070,7 @@ body {
 
   .black-footer {
     padding: 10px;
+    
   }
 
   .footer-left,
