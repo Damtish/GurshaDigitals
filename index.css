@@ -786,6 +786,7 @@ body {
 .company-name {
   margin: 0;
   font-size: 14px;
+  color: #21758F;
 }
 
 
@@ -859,7 +860,14 @@ body {
   .contactus {
     width: 95%;
     padding-right: 10px;
+    background-color: #F9991D;
   }
+  .contactus .contact_button button {
+    width: 150px;
+    height: 150px;
+    
+  }
+  
 }
 
 @media (max-width:860px) {
@@ -907,7 +915,7 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #E3B27D;
+    background-color: #F9991D;
     border: 0px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
