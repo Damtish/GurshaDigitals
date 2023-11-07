@@ -19,6 +19,8 @@
     <div class="loading-screen">
         <img src="pics/loading-screen.png" alt="">
       </div>
+      <button id="scrollToTopButton"><img src="pics/arrow-up-solid.svg" alt=""></button>
+ 
     <div class="wrapper">
 
         <div class="logo">
@@ -215,35 +217,6 @@
             </div>
         </div>
     
-        <!-- <div class="testimonials">
-            <div class="title">
-                <p>Testimonials</p>
-                <h1>Read what they have to say</h1>
-            </div>
-            <div class="people">
-                <div class="1st person">
-                    <div class="image"> <img src="business-people-discussing-business-idea.svg" alt=""></div>
-                    <div class="name">asas</div>
-                    <div class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptates hic
-                        distinctio. Quos accusantium distinctio minus maiores, quo corporis nesciunt.</div>
-                </div>
-    
-                <div class="2nd person">
-                    <div class="image"> <img src="business-people-discussing-business-idea.svg" alt=""></div>
-                    <div class="name">asas</div>
-                    <div class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptates hic
-                        distinctio. Quos accusantium distinctio minus maiores, quo corporis nesciunt.</div>
-                </div>
-    
-                <div class="3rd person">
-                    <div class="image"> <img src="business-people-discussing-business-idea.svg" alt=""></div>
-                    <div class="name">asas</div>
-                    <div class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptates hic
-                        distinctio. Quos accusantium distinctio minus maiores, quo corporis nesciunt.</div>
-                </div>
-            </div>
-        </div> -->
-    
         <div class="contactus">
             <div class="image"><img src="pics/customer-support.svg" alt=""></div>
             <div class="text">
@@ -285,6 +258,10 @@
                 <a class="social-container">
                     <img src="pics/Platform=Telegram, Color=Negative.png" alt="Telegram" class="social_image blue">
                     <img src="pics/Platform=Telegram, Color=white.png" alt="Telegram" class="social_image white">
+                </a>
+                <a class="social-container">
+                    <img src="pics/Platform=TikTok, Color=Negative.png" alt="tiktok" class="social_image blue">
+                    <img src="pics/Platform=TikTok, Color=white.png" alt="toktok" class="social_image white">
                 </a>
             </div>
         </div>
@@ -348,46 +325,26 @@
 
     observer2.observe(document.getElementById("whoarewe"));
 
-    // Select the testimonials element
-    // const testimonials = document.querySelector('.testimonials');
+    
+    document.addEventListener("DOMContentLoaded", function() {
+    const scrollToTopButton = document.getElementById("scrollToTopButton");
 
-    // // Define the options for the Intersection Observer
-    // const options2 = {
-    //     root: null,
-    //     rootMargin: '0px',
-    //     threshold: 0.2 // Adjust the threshold as needed
-    // };
+    // Show the button when user scrolls down 100px
+    window.addEventListener("scroll", function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    });
 
-    // // Create an Intersection Observer instance
-    // const testimonialObserver = new IntersectionObserver((entries, observer) => {
-    //     entries.forEach((entry) => {
-    //         if (entry.isIntersecting) {
-    //             entry.target.classList.add('animate');
-    //             observer.unobserve(entry.target); // Stop observing once animated
-    //         }
-    //     });
-    // }, options2);
+    // Scroll to the top when the button is clicked
+    scrollToTopButton.addEventListener("click", function() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    });
+});
 
-    // // Observe the testimonials element
-    // testimonialObserver.observe(testimonials);
-
-    // // Select the person elements
-    // const personElements = document.querySelectorAll('.person');
-
-    // // Create a separate Intersection Observer for the person elements
-    // const personObserver = new IntersectionObserver((entries, observer) => {
-    //     entries.forEach((entry) => {
-    //         if (entry.isIntersecting) {
-    //             entry.target.classList.add('animate');
-    //             observer.unobserve(entry.target); // Stop observing once animated
-    //         }
-    //     });
-    // }, options2);
-
-    // // Observe each person element
-    // personElements.forEach((element) => {
-    //     personObserver.observe(element);
-    // });
 
     const navbarToggle = document.getElementById('navbar-toggle');
     const navbarToggleLabel = document.querySelector('.navbar-toggle-label');

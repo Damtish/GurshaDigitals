@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -36,6 +39,35 @@ body {
   }
 }
 
+#scrollToTopButton {
+  display: none;
+  width: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #c9ccd1;
+  /* Background color */
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Add a subtle shadow */
+  transition: background-color 0.3s, transform 0.3s;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+#scrollToTopButton img {
+  width: 25px;
+}
+
+#scrollToTopButton:hover {
+  background-color: #F9991D;
+  /* Change color on hover */
+  transform: scale(1.05);
+  /* Slightly scale on hover */
+}
+
 
 .wrapper::before {
     content: "";
@@ -45,7 +77,7 @@ body {
     left: 0;
     width: 100%;
     height: 90vh;
-     background-image: image-set('pics/social-media-marketing-concept-marketing-with-applications_23-2150063156.jpg');
+     background-image: image-set('pics/2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -247,6 +279,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 1), 0 2px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     text-align: center;
+    padding: 10PX;
   
 }
 .services.animate {
