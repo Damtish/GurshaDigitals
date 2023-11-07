@@ -82,7 +82,7 @@ body {
 }
 
 .navbar.scrolled {
-  background-color: rgba(255, 244, 244, 0.479); 
+  background-color: rgba(147, 147, 147, 0.479); 
 }
 .navbar.scrolled a {
   color:black; /* Change this to your desired text color */
@@ -348,7 +348,6 @@ body {
 
 .wrapper2{
   padding-top: 100px;
-  background-color: #2A6482;
   padding-bottom: 200px;
 }
 
@@ -405,7 +404,7 @@ body {
 }
 
 .title h1 span {
-  color: white;
+  color: #21758F;
 }
 
 .service_collection {
@@ -424,7 +423,7 @@ body {
   width: 280px;
   color: #909090;
   flex-direction: column;
-  background-color: #222222;
+  background: linear-gradient(to bottom, #21758F, #222222);
   padding: 20px;
   border-radius: 10px;
   opacity: 0;
