@@ -255,6 +255,7 @@ body {
 .quote-section p {
     font-size: 24px;
     margin-bottom: 30px;
+    color: white;
 }
 
 .quote-section button {
@@ -265,7 +266,7 @@ body {
     border-radius: 50px;
     color: #ffffff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .quote-section button:hover {
@@ -313,7 +314,7 @@ body {
 
 }
 
-.services .content h5 {
+.services .content h5,p {
     margin: 0;
     color: black;
 }
