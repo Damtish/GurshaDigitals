@@ -490,11 +490,14 @@ button:hover {
 .company-quote {
     margin: 0;
     font-size: 18px;
+    color: white;
 }
 
 .phone-number {
     margin-top: 5px;
     font-size: 14px;
+    color: white;
+    margin-bottom: 10px;
 }
 
 .footer-right {
@@ -533,6 +536,10 @@ button:hover {
     clear: both;
     text-align: center;
     margin-top: 20px;
+    
+}
+.footer-bottom p{
+    color: white;
 }
 
 .company-name {

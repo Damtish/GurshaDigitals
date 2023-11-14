@@ -35,7 +35,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="service.html">Services</a></li>
-                <li><a id="contact" href="ContactPage.html">Contact</a></li>
+                <li><a id="contact" href="ContactPage.php">Contact</a></li>
             </ul>
         </nav>
         <div class="introduction">
@@ -99,26 +99,26 @@
         </div>
     </div>
     <div class="contactform">
-        <form id="contactForm">
+        <form method="post" action="send-email.php" id="contactForm">
             <div class="name">
                 <label for="name">Full Name </label>
-                <input type="text" id="name" required>
+                <input type="text" id="name" name="name" required>
             </div>
             <div class="email">
                 <label for="email">Email </label>
-                <input type="email" id="email" required>
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="phone">
                 <label for="phone">Phone </label>
-                <input type="tel" id="phone" required>
+                <input type="tel" id="phone" name="phone" required>
             </div>
             <div class="subject">
                 <label for="subject">Subject</label>
-                <input type="text" id="subject">
+                <input type="text" id="subject" name="subject">
             </div>
             <div class="message">
                 <label for="message">Message </label>
-                <textarea id="message" required></textarea>
+                <textarea id="message" required name="message"></textarea>
             </div>
             <button type="submit">SEND MESSAGE</button>
         </form>
@@ -167,7 +167,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="service.html">Services</a></li>
-                <li><a href="ContactPage.html">Contact</a></li>
+                <li><a href="ContactPage.php">Contact</a></li>
             </ul>
         </div>
         <div class="footer-bottom">
@@ -226,36 +226,53 @@
         }
     });
 </script>
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-        e.preventDefault();
 
-        // Capture form values (for example)
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        // ... capture other fields ...
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-        // Here you would typically send the form data to a server-side script
-        // to handle the email sending.
-        alert('Form submitted! You would typically send this data to a server to process.');
-    });
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    require 'PHPMailer/src/PHPMailer.php';
+    require 'PHPMailer/src/Exception.php';
+    require 'PHPMailer/src/SMTP.php';
 
-</script>
-<!-- <?php
-// Sender and recipient information
-$to = 'recipient@example.com';  // Replace with the recipient email address
-$subject = $_POST['subject'];
-$message = $_POST['message'];
-$headers = "From: ".$_POST['email']."\r\n";
-$headers .= "Reply-To: ".$_POST['email']."\r\n";
-$headers .= "Content-type: text/html\r\n";
+    // Retrieve form data
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
 
-// Send the email
-if (mail($to, $subject, $message, $headers)) {
-    echo 'Email sent!';
-} else {
-    echo 'Email could not be sent.';
+    // Create a PHPMailer instance
+    $mail = new PHPMailer(true);
+
+    try {
+        // Server settings for your email provider
+        $mail->isSMTP();
+        $mail->Host = 'mail.gurshadigitals.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'mail@gurshadigitals.com';
+        $mail->Password = 'o=B?4CkI9*g7'; // Replace with your actual email account password
+        $mail->SMTPSecure = 'ssl'; // Use SSL encryption
+        $mail->Port = 465; // SMTP port for SSL
+
+        // Set sender and recipient
+        $mail->setFrom($email, $name);
+        $mail->addAddress('leulzergaw6@gmail.com', 'gursha digitals');
+
+        // Email content
+        $mail->isHTML(true);
+        $mail->Subject = $subject;
+        $mail->Body = $message . '<br>Sent by: ' . $name . '<br>Email: ' . $email . '<br>Phone: ' . $phone;
+
+        // Send the email
+        $mail->send();
+        echo 'Email has been sent!';
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
 }
-?> -->
+?>
+
 
 </html>
