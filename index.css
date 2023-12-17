@@ -930,7 +930,10 @@ body {
     margin-left: 5%;
 
   }
+  .navbar-menu li a {
+    color: black;
 
+  }
   .navbar {
     flex-direction: column;
     align-items: flex-end;
@@ -957,13 +960,13 @@ body {
     /* Added */
     justify-content: center;
     /* Added */
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 1);
     /* Adjust the last value (0.5) for transparency */
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(50px); */
     /* Adjust the blur value as desired */
     z-index: 9999;
     /* Adjust the z-index as needed */
-    height: 70vh;
+    height: 85vh;
     font-size: 20px;
     margin-right: 0%;
     gap: 0px;
@@ -979,10 +982,7 @@ body {
 
   }
 
-  .navbar-menu li a {
-    color: white;
-
-  }
+ 
 
   .navbar-toggle:checked~.navbar-menu {
     opacity: 1;
